@@ -1,0 +1,31 @@
+<div class="login-area">
+    <div class="login-container">
+        <h1>LOGIN</h1>
+        <mat-divider></mat-divider>
+        <form>
+            <!-- Username -->
+            <mat-form-field >
+                <mat-label>Username</mat-label>
+                <input matInput placeholder="Username" [formControl]="usernameFormControl" [errorStateMatcher]="usernameMatcher">
+                @if (usernameFormControl.hasError('required')) {
+                    <mat-error>Username es requerida.</mat-error>
+                }
+                @if (usernameFormControl.hasError('minlength')) {
+                    <mat-error>Username debe tener al menos 5 caracteres.</mat-error>
+                }
+            </mat-form-field>
+            <!-- Contraseña -->
+            <mat-form-field>
+                <mat-label>Contraseña</mat-label>
+                <input matInput type="password" placeholder="Contraseña" [formControl]="passwordFormControl" [errorStateMatcher]="passwordMatcher">
+                @if (passwordFormControl.hasError('required')) {
+                    <mat-error>Contraseña es requerida.</mat-error>
+                }
+                @if (passwordFormControl.hasError('pattern')) {
+                    <mat-error>Contraseña debe contener al menos una letra mayúscula, una letra minúscula, un número y un carácter especial.</mat-error>
+                }
+            </mat-form-field>
+        </form>
+        <button mat-raised-button color="success">Acceder</button>
+    </div>
+</div>

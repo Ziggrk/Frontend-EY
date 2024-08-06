@@ -1,0 +1,51 @@
+.supplier-area{
+    background-color: #333333;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.supplier-header{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+h1{
+    color: #ffe600;
+    font-weight: 700;
+    font-size: 40px;
+    letter-spacing: 4px;
+}
+
+.supplier-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100vh;
+}
+
+
+.mat-custom {
+    background-color: #ffe600 !important;
+    color: #000000 !important;
+    font-size: 20px;
+    font-weight: 700;
+    width: 100vh;
+}
+
+.supplier-table{
+    padding: 50px 00px 30px 00px;
+}
+
+.table-container{
+    padding: 50px 20px 30px 20px;
+}
